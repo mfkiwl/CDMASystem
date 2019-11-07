@@ -27,7 +27,13 @@ function modDataStream = Transmitter(data, txParams)
        
     %% Wideband Code Spreading
     
+    % Allocating buffer for modulated data stream
+    modDataStream = zeros(size(modData, 1) * txParams.chipLen, size(modData, 2));
     userCodes = genCodes(txParams);
+    
+    for iter_users = 1:txParams.numUsers
+        wideSym
+    end
     
 
 end

@@ -1,5 +1,5 @@
 function txParams = txConfig()
-    txParams.QAM = 2;
+    txParams.QAM = 4;
 
     % SNR in db
     txParams.SNRdb = 10;
