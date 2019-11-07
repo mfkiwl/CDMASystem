@@ -1,0 +1,21 @@
+% genCodes: Generate Maximal length PN Sequences or Walsh codes for 
+% Multiple Access
+% Input: txParams
+%        txParams  - A structure containing system parameters like
+%                         number of users, code rate, qam alphabet etc.
+%
+% Output: userCodes - A matrix containing the wideband code assigned for 
+%                     each user at every column.
+%
+
+function userCodes = genCodes(txParams)
+    userCodes = zeros(txParams.chipLen, txParams.numUsers);
+    
+    pnSeqGen = comm.PNSequence('Polynomial', 'z^3 + z^2 + 1', ...
+           'SamplesPerFrame', 7, 'InitialConditions', );
+    
+    for iter_users = 1:txParams.numUsers
+        userCodes(iter_users) = 
+    end
+
+end
